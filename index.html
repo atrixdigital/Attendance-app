@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Attendance-app</title>
+	<!-- importing fonts -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="app/lib/css/materialize.css">
+</head>
+<body>
+
+
+    <!-- Navbar goes here -->
+
+ <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Attendance app</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="app/modules/home/view/projects.html">Projects</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+    <!-- Page Layout here -->
+    <div class="row">
+
+      <div class="col s12 m4 l3"> <!-- Note that "m4 l3" was added -->
+        <!-- Grey navigation panel
+
+              This content will be:
+          3-columns-wide on large screens,
+          4-columns-wide on medium screens,
+          12-columns-wide on small screens  -->
+
+<div class="collection">
+
+
+	<div class="row">
+	        <div class="input-field col s12">
+	          <input id="password" type="password" class="validate">
+	          <label for="password">Search</label>
+	        </div>
+	      </div>
+
+    <a href="#!" class="collection-item">Home</a>
+        <a href="#!" class="collection-item">Attendance<span class="badge">{{totalAtt}}</span></a>
+
+    <a href="#!" class="collection-item">Members<span class="badge">{{members}}</span></a>
+    <a href="#!" class="collection-item">Projects<span class="badge">{{projects}}</span></a>
+
+
+
+</div>
+      </div>
+
+
+
+      <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
+        <!-- Teal page content
+
+              This content will be:
+          9-columns-wide on large screens,
+          8-columns-wide on medium screens,
+          12-columns-wide on small screens  -->
+
+
+
+
+
+<h2 class="heading underline"> Projects </h2>
+<div class="col s4">
+       <div class="card" ng-repeat="p in projects">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" width="100px" height="100px" src="">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">{{p.projectTitle}}<i class="material-icons right">more_vert</i></span>
+      <p><a href="#">{{p.link}}</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">{{p.projectTitle}}<i class="material-icons right">close</i></span>
+      <p>{{p.clickinfo}}.</p>
+    </div>
+  </div>
+      </div>
+
+
+<!-- table markup -->
+<table class="striped">
+        <thead>
+        <tr><td><h4>date()</h4> <input type="date" ng-model="attDate"></td> </tr>
+          <tr>
+              <th data-field="id">Name</th>
+              <th data-field="name">monday</th>
+              <th data-field="price">Tuesday</th>
+              <th data-field="price">Wednesday</th>
+              <th data-field="price">Thursday</th>
+              <th data-field="price">Friday</th>
+              <th data-field="price">Saturday</th>
+          </tr>
+        </thead>
+
+        <tbody>
+         
+          <tr ng-repeat="a in attendance | filter:attDate">
+            <td>{{a.name}}</td>
+            <td>{{a.monday}}</td>
+            <td>{{a.tuesday}}</td>
+            <td>{{a.wednesday}}</td>
+            <td>{{a.thursday}}</td>
+            <td>{{a.friday}}</td>
+            <td>{{a.saturday}}</td>
+          </tr>
+         
+        </tbody>
+      </table>
+            
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+
+<!-- app.js files -->
+<script src="app/app.js" ></script>
+<script src="app/route.js" ></script>
+<script src="app/modules/home/homeController.js" ></script>
+
+
+<!-- dependencies -->
+<script src="app/lib/js/materialize.js"> </script>
+<script src="app/lib/js/jquery.min.js"> </script>
+
+<!-- adding angular -->
+<script src="app/lib/js/bower_components/angular/angular.js"></script>
+<script src="app/lib/js/bower_components/angular-animate/angular-animate.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "attendance-app",
+  "version": "1.0.0",
+  "description": "attendace app for atrix. web version",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atrixdigital/Attendance-app.git"
+  },
+  "keywords": [
+    "attendance"
+  ],
+  "dependencies":{
+    "angular-material":"*",
+    "angular-route":"*",
+    "angular-fire": "*"
+
+  },
+  "author": "atrixdigital",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atrixdigital/Attendance-app/issues"
+  },
+  "homepage": "https://github.com/atrixdigital/Attendance-app#readme"
+}
